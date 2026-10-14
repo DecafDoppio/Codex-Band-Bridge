@@ -1,0 +1,27 @@
+{
+  "name": "Codex Band Bridge",
+  "icon": "icon.png",
+  "version": "1.3.1",
+  "description": "将 Codex 的授权请求发送到手环，可在电脑或手环批准、拒绝；多项请求按队列展示。“Codex 有个问题”在手环提示问题内容，回答仍在电脑完成。使用前选择设备、测试连接、安装并信任钩子。关闭总开关会停止转发，保留蓝牙连接。电脑与手环间通过本机桥接通信。",
+  "author": "DecafDoppio",
+  "website": "https://github.com/DecafDoppio/Codex-Band-Bridge",
+  "entry": "codex_band_bridge.wasm",
+  "wasi_version": 3,
+  "api_level": 4,
+  "permissions": [
+    "device",
+    "interconnect",
+    "register_interconnect_recv",
+    "http-server",
+    "thirdpartyapp",
+    "os.device-id",
+    "clipboard.write",
+    "dialog"
+  ],
+  "additional_files": [
+    "codex-hooks.zip",
+    "tcl-tk.zip",
+    "Configure-Codex.ps1",
+    "Review-Codex-Hooks.ps1"
+  ]
+}
