@@ -1,8 +1,8 @@
 # Codex Band Bridge
 
-AstroBox 电脑插件，将 Codex 授权请求发送到手环，支持双端处理与队列同步。问题回答仍在电脑完成。
+AstroBox 电脑插件，将 Codex 授权请求发送到手环Codex Band Connector快应用，支持双端处理与队列同步。问题回答仍在电脑完成。
 
-当前版本 **1.3.1**。维护者 **DecafDoppio** 已确认真机验收成功。保留新电脑 UI、通用钩子与现有 60 秒原生回退；关闭总开关停止转发并保留蓝牙连接。
+当前版本 **1.3.1**，发布日期2026年10月15日。🌟手表端仅适配了小米手环11系列，开发者已经加了好几个鸡腿腿儿，会在近两周内支持更多型号的设备。
 
 ![封面](media/cover.png)
 
@@ -11,6 +11,8 @@ AstroBox 电脑插件，将 Codex 授权请求发送到手环，支持双端处�
 [下载 1.3.1](https://github.com/DecafDoppio/Codex-Band-Bridge/releases/tag/v1.3.1) · [全部 Releases](https://github.com/DecafDoppio/Codex-Band-Bridge/releases)
 
 下载 Release 中的完整 ABP，在 AstroBox 2.2.0+ 导入（API Level 4 / WASI 3）。现有电脑流程面向 Windows，需要 Python 3.10+ 与 tkinter/_tkinter；插件不安装或升级 Python，不更改系统 PATH。选择设备、测试连接，按插件说明安装并信任钩子。
+
+**由于Hooks限制，无法同时展示原生授权界面并向手环推送界面，因此设计了单独的电脑端弹窗连接Hooks用于电脑端批准。**
 
 保留现有八项权限：device、interconnect、register_interconnect_recv、http-server、thirdpartyapp、os.device-id、clipboard.write、dialog。ABP 必须包含钩子 ZIP、Tcl/Tk ZIP、配置脚本与审阅脚本，不能只下载 WASM。
 
