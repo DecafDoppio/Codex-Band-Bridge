@@ -1,5 +1,7 @@
 # GitHub 与 AstroBox 发布
 
+2026-10-21：配套手环端适配小米手环 10、10 NFC、11 及 11 NFC。本次仅更新声明，未重新封装或替换 Bridge ABP。
+
 ## main 分支
 
 提交源码、锁定依赖、构建脚本、许可证与 media。不要提交 dist、downloads、node_modules、target、.local、.publication、私钥或连接配置。本机旧产物可以保留，首次暂存须复核忽略规则与全部暂存文件。

@@ -72,7 +72,7 @@ pub fn render(id:&str,stages:&[Stage],selected:Option<&str>,devices:&[(String,St
         info=info.child(Element::new(ElementType::Div,None).flex().align_center().gap(16)
             .child(text(&s.title).flex_grow(1.0)).child(button("返回总览","overview")));
         info=info.child(text(&s.message));
-        if s.id=="device" {info=info.child(device_picker(devices,bound_addr)).child(text("初版1.3.1版针对小米手环11开发，固件4.100.139，其他设备正在努力适配中").text_color(MUTED));}
+        if s.id=="device" {info=info.child(device_picker(devices,bound_addr)).child(text("当前适配小米手环 10、10 NFC、11 及 11 NFC").text_color(MUTED));}
         let instructions=if s.solution.is_empty(){&s.steps}else{&s.solution};
         for (n,step) in instructions.iter().enumerate(){info=info.child(text(&format!("{}. {step}",n+1)).text_color(MUTED));}
         if s.id=="hooks" {
